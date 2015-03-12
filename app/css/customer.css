@@ -19,7 +19,93 @@ top: 0px;
 left: 0px;
 width: 220px;
 height: 100%;
-background: rgb(236, 236, 236);
+background: rgb(255, 255, 255);
+box-shadow: 0 0 4px gray;
+}
+
+.logo {
+left: 16px;
+top: 14px;
+font-family: arial;
+font-size: 22px;
+text-align: left;
+position: relative;
+color: #65ABFF;
+font-weight: bold;
+margin-bottom: 26px;
+}
+
+.search_bar {
+position: relative;
+width: 194px;
+background: #ADADAD;
+height: 26px;
+left: 11px;
+margin-bottom: 15px;
+border-radius: 50px;
+box-shadow: 0 0 5px gray;
+}
+
+
+.search_bar_input {
+font-family: arial;
+font-size: 16px;
+line-height: 25px;
+padding-left: 16px;
+color: rgb(255, 255, 255);
+}
+
+.search_bar_bn {
+position: absolute;
+top: 0px;
+right: 0px;
+width: 26px;
+height: 26px;
+background: #65ABFF;
+border-radius: 26px;
+box-shadow: 0 0 1px gray;
+}
+
+.search_bar_bn:hover {
+background: orange;
+}
+
+.main_navigator_h1 {
+font-size: 16px;
+font-family: Arial;
+height: 25px;
+width: 210px;
+position: relative;
+line-height: 25px;
+padding-left: 0px;
+padding-bottom: 7px;
+margin-left: 16px;
+margin-right: 0px;
+color: #6C6C6C;
+}
+
+.main_navigator_h1:hover {
+cursor: pointer;
+color: #65ABFF;
+}
+
+.main_navigator_h2 {
+font-size: 14.5px;
+font-family: Arial;
+height: 21px;
+width: 179px;
+position: relative;
+line-height: 21px;
+padding-left: 7px;
+margin-left: 20px;
+margin-right: 0px;
+border-color: #33CCFF;
+color: #858585;
+}
+
+.main_navigator_h2:hover {
+cursor: pointer;
+color: #65ABFF;
 }
 
 .detail_container {
@@ -31,20 +117,31 @@ padding-bottom: 8px;
 width: 100%;
 height: 100%;
 background: transparent;
+overflow-y: scroll;
+overflow-x: hidden;
+}
+
+.page_header {
+position: relative;
+left: 7px;
+top: 4px;
+font-family: arial;
+font-size: 23px;
+margin-bottom: 5px;
 }
 
 .app_unit {
 position: relative;
 float: left;
-width: 284px;
+width: 280px;
 height: 170px;
 margin: 8px;
 background: rgb(255, 255, 255);
-box-shadow: 0px 0px 2px gray;
+box-shadow: 0px 0px 4px gray;
 }
 
 .app_unit:hover {
-background: orange;
+background: #b3d4fc;
 }
 
 .fadeIn {
