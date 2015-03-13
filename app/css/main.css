@@ -370,6 +370,42 @@ text-align: justify;
 text-justify: inter-word;
 }
 
+.overlay_snapshot {
+position: absolute;
+float: left;
+right: 0;
+bottom: 246px;
+font-family: arial;
+font-size: 17px;
+margin-bottom: 5px;
+color: rgb(229, 229, 229);
+font-weight: bold;
+width: 188px;
+}
+
+.overlay_snapshot_1 {
+position: absolute;
+bottom: 138px;
+width: 174px;
+height: 108px;
+background: rgb(232, 232, 232);
+right: 14px;
+float: right;
+clear: right;
+border-radius: 5px;
+}
+
+.overlay_snapshot_2 {
+position: absolute;
+bottom: 18px;
+width: 174px;
+height: 108px;
+background: rgb(232, 232, 232);
+right: 14px;
+float: left;
+border-radius: 5px;
+}
+
 .fadeIn {
         /* CSS needed for animation
         ---------------------------------------------------- */
