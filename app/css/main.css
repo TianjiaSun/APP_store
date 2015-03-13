@@ -184,7 +184,7 @@ color: rgb(115, 115, 115);
 
 .app_price {
 position: absolute;
-left: 240px;
+left: 236px;
 top: 147px;
 font-family: arial;
 font-size: 14px;
@@ -193,24 +193,37 @@ color: rgb(51,176,240);
 
 #overlay_container {
 position: absolute;
-top: 0px;
-left: 0px;
-width: 100%;
-height: 100%;
-padding-left: 220px;
+top: 50%;
+left: 233px;
+width: calc(100% - 283px);
+height: calc(100% - 62px);
+background: rgb(242, 242, 242);
 z-index: 1;
-background: #23538a; /* Old browsers */
-background: -moz-linear-gradient(top,  #23538a 0%, #5db9dd 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#23538a), color-stop(100%,#5db9dd)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #23538a 0%,#5db9dd 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #23538a 0%,#5db9dd 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #23538a 0%,#5db9dd 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #23538a 0%,#5db9dd 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23538a', endColorstr='#5db9dd',GradientType=0 ); /* IE6-9 */
-
+transform: translateY(-50%);
+box-shadow: 0 0 5px black;
 }
 
-#overlay_name {
+.overlay_app_edge {
+width: 58px;
+height: 62px;
+background: rgb(0, 0, 0);
+border-radius: 14px;
+margin-top: 9px;
+margin-left: 0;
+box-shadow: 0 0 2px 0px black;
+}
+
+.overlay_app_img {
+position: absolute;
+width: 56px;
+height: 56px;
+background: rgb(51, 176, 240);
+border-radius: 12px;
+margin-top: -62px;
+margin-left: 1px;
+}
+
+.overlay_name {
 position: relative;
 left: 7px;
 top: 14px;
