@@ -209,13 +209,46 @@ background: linear-gradient(to bottom,  #066dab 0%,#8abbd7 69%,#c5deea 100%); /*
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#066dab', endColorstr='#c5deea',GradientType=0 ); /* IE6-9 */
 }
 
-.overlay_iframe_container{
+.overlay_app_header {
 position: absolute;
 top: 16px;
 left: 16px;
+background: #ff9d00;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+height: 32px;
 width: calc(100% - 220px);
-height: calc(100% - 32px);
-border-radius: 10px;
+z-index: 4;
+box-shadow: 0 0 10px black;
+}
+
+.overlay_app_header_name {
+color: white;
+position: relative;
+z-index: 2;
+font-size: 18px;
+line-height: 30px;
+text-decoration: none;
+/* text-shadow: 3px 1px 9px #e7e7e7; */
+text-align: center;
+text-transform: capitalize;
+font-family: arial;
+font-weight: bold;
+float: center;
+}
+
+.overlay_app_header_close {
+
+}
+
+.overlay_iframe_container{
+position: absolute;
+top: 48px;
+left: 16px;
+width: calc(100% - 220px);
+height: calc(100% - 62px);
+border-bottom-right-radius: 10px;
+border-bottom-left-radius: 10px;
 box-shadow: 0 0 10px 1px black;
 overflow: hidden;
 z-index: 3;
