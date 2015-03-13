@@ -2,7 +2,7 @@ $(document).ready(function() {
   $("#overlay_container").hide();
 
   $(".app_unit").click(function() {
-    $("#overlay_container").fadeIn(300);   
+    $("#overlay_container").fadeIn(600);   
   });
 
   $(".overlay_close").click(function() {

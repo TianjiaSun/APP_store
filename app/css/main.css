@@ -195,23 +195,14 @@ color: rgb(51,176,240);
 #overlay_container {
 position: absolute;
 top: 50%;
-left: 200px;
-width: calc(100% - 200px);
-height: 100%;
+left: 210px;
+width: calc(100% - 240px);
+height: calc(100% - 20px);
+border-radius: 10px;
 z-index: 3;
 transform: translateY(-50%);
-border-left-style: solid;
-border-left-width: 1px;
-border-left-color: rgb(200,200,200);
-background: #23538a; /* Old browsers */
-background: -moz-linear-gradient(top,  #23538a 0%, #5db9dd 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#23538a), color-stop(100%,#5db9dd)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #23538a 0%,#5db9dd 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #23538a 0%,#5db9dd 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #23538a 0%,#5db9dd 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #23538a 0%,#5db9dd 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23538a', endColorstr='#5db9dd',GradientType=0 ); /* IE6-9 */
-
+background: #F7F7F7;
+box-shadow: 0 0 10px gray;
 }
 
 .overlay_inner_container{
