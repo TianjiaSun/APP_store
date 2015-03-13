@@ -216,7 +216,7 @@ left: 16px;
 background: #ff9d00;
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
-height: 32px;
+height: 28px;
 width: calc(100% - 220px);
 z-index: 4;
 box-shadow: 0 0 10px black;
@@ -227,7 +227,7 @@ color: white;
 position: relative;
 z-index: 2;
 font-size: 18px;
-line-height: 30px;
+line-height: 28px;
 text-decoration: none;
 /* text-shadow: 3px 1px 9px #e7e7e7; */
 text-align: center;
@@ -239,7 +239,7 @@ float: center;
 
 .overlay_iframe_container{
 position: absolute;
-top: 48px;
+top: 44px;
 left: 16px;
 width: calc(100% - 220px);
 height: calc(100% - 62px);
@@ -260,7 +260,7 @@ overflow: hidden;
 position: absolute;
 float: right;
 right: 14px;
-top: 6px;
+top: 4px;
 font-family: arial;
 font-size: 16px;
 color: rgb(255, 255, 255);
@@ -273,53 +273,14 @@ cursor: pointer;
 color: black;
 }
 
-.overlay_app_edge {
-position: absolute;
-float: right;
-top: 50px;
-right: 126px;
-width: 58px;
-height: 62px;
-background: rgb(0, 0, 0);
-border-radius: 14px;
-margin-top: 9px;
-margin-left: 0;
-box-shadow: 0 1px 4px 0px black;
-}
-
-.overlay_app_img {
-position: absolute;
-float: right;
-top: 58px;
-right: 127px;
-width: 56px;
-height: 56px;
-background: rgb(51, 176, 240);
-border-radius: 12px;
-margin-top: 0;
-margin-left: 0;
-box-shadow: 0 0 9px 2px white;
-}
-
-.overlay_name {
-position: absolute;
-float: left;
-right: 33px;
-top: 67px;
-font-family: arial;
-font-size: 16px;
-margin-bottom: 5px;
-color: rgb(10, 0, 87);
-font-weight: bold;
-}
-
 .overlay_install {
 position: absolute;
 top: 17px;
-right: 20px;
-width: 160px;
+right: 14px;
+width: 174px;
 height: 32px;
 font-family: arial;
+font-weight: bold;
 line-height: 32px;
 font-size: 18px;
 border-radius: 5px;
@@ -341,6 +302,73 @@ cursor: pointer;
 background: #ff9d00;
 }
 
+.overlay_app_edge {
+position: absolute;
+float: right;
+top: 70px;
+right: 130px;
+width: 58px;
+height: 62px;
+background: rgb(0, 0, 0);
+border-radius: 14px;
+margin-top: 9px;
+margin-left: 0;
+box-shadow: 0 1px 2px 0px black;
+}
+
+.overlay_app_img {
+position: absolute;
+float: right;
+top: 80px;
+right: 131px;
+width: 56px;
+height: 56px;
+background: rgb(51, 176, 240);
+border-radius: 12px;
+margin-top: 0;
+margin-left: 0;
+box-shadow: 0 0 0px 2px white;
+}
+
+.overlay_name {
+position: absolute;
+float: left;
+right: 0;
+top: 78px;
+font-family: arial;
+font-size: 17px;
+margin-bottom: 5px;
+color: rgb(229, 229, 229);
+font-weight: bold;
+width: 120px;
+}
+
+.overlay_price {
+position: absolute;
+float: left;
+right: 0;
+top: 101px;
+font-family: arial;
+font-size: 17px;
+margin-bottom: 5px;
+color: orange;
+font-weight: bold;
+width: 120px;
+}
+
+.overlay_brief {
+position: absolute;
+float: left;
+right: 12px;
+top: 162px;
+font-family: arial;
+font-size: 16px;
+margin-bottom: 5px;
+color: rgb(229, 229, 229);
+width: 176px;
+text-align: justify;
+text-justify: inter-word;
+}
 
 .fadeIn {
         /* CSS needed for animation
