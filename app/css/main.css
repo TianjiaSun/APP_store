@@ -101,12 +101,12 @@ color: orange;
 }
 
 .main_navigator_h2 {
-font-size: 14.5px;
+font-size: 15px;
 font-family: Arial;
-height: 21px;
+height: 23px;
 width: 179px;
 position: relative;
-line-height: 21px;
+line-height: 23px;
 padding-left: 7px;
 margin-left: 20px;
 margin-right: 0px;
@@ -283,7 +283,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', end
 
 .overlay_close:hover {
 cursor: pointer;
-background: #ff9d00;
+background: #C70000;
+color: white;
 }
 
 .overlay_install {
@@ -312,7 +313,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', end
 
 .overlay_install:hover {
 cursor: pointer;
-background: #ff9d00;
+background: #189C00;
+color: white;
 }
 
 .overlay_app_edge {
