@@ -237,10 +237,6 @@ font-weight: bold;
 float: center;
 }
 
-.overlay_app_header_close {
-
-}
-
 .overlay_iframe_container{
 position: absolute;
 top: 48px;
@@ -264,17 +260,17 @@ overflow: hidden;
 position: absolute;
 float: right;
 right: 14px;
-top: 10px;
+top: 6px;
 font-family: arial;
 font-size: 16px;
-color: rgb(255,255,255);
+color: rgb(255, 255, 255);
 font-weight: bold;
 z-index: 10;
 }
 
 .overlay_close:hover {
 cursor: pointer;
-color: orange;
+color: black;
 }
 
 .overlay_app_edge {
@@ -315,6 +311,34 @@ font-size: 16px;
 margin-bottom: 5px;
 color: rgb(10, 0, 87);
 font-weight: bold;
+}
+
+.overlay_install {
+position: absolute;
+top: 17px;
+right: 20px;
+width: 160px;
+height: 32px;
+font-family: arial;
+line-height: 32px;
+font-size: 18px;
+border-radius: 5px;
+text-align: center;
+color: black;
+box-shadow: 0 0 8px black;
+background: #feffff; /* Old browsers */
+background: -moz-linear-gradient(top,  #feffff 0%, #ddf1f9 35%, #a0d8ef 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#feffff), color-stop(35%,#ddf1f9), color-stop(100%,#a0d8ef)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #feffff 0%,#ddf1f9 35%,#a0d8ef 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feffff', endColorstr='#a0d8ef',GradientType=0 ); /* IE6-9 */
+}
+
+.overlay_install:hover {
+cursor: pointer;
+background: #ff9d00;
 }
 
 
