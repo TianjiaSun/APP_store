@@ -229,13 +229,12 @@ box-shadow: 0 0 10px black;
 }
 
 .overlay_app_header_name {
-color: white;
+color: rgb(227, 227, 227);
 position: relative;
 z-index: 2;
 font-size: 18px;
 line-height: 27px;
 text-decoration: none;
-/* text-shadow: 3px 1px 9px #e7e7e7; */
 text-align: center;
 text-transform: capitalize;
 font-family: arial;
@@ -274,7 +273,7 @@ line-height: 32px;
 font-size: 18px;
 border-radius: 5px;
 text-align: center;
-color: white;
+color: black;
 box-shadow: 0 0 8px black;
 background: #ff9d00;
 }
@@ -297,7 +296,7 @@ line-height: 32px;
 font-size: 18px;
 border-radius: 5px;
 text-align: center;
-color: white;
+color: black;
 box-shadow: 0 0 8px black;
 background: #ff9d00;
 }
@@ -368,7 +367,7 @@ float: left;
 right: 12px;
 top: 200px;
 font-family: arial;
-font-size: 16px;
+font-size: 15px;
 margin-bottom: 5px;
 color: rgb(229, 229, 229);
 width: 176px;
