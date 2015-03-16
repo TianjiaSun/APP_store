@@ -284,7 +284,7 @@ background: rgb(51, 176, 240);
 border-radius: 12px;
 margin-top: 0;
 margin-left: 0;
-box-shadow: 0 0 2px 0px black;
+box-shadow: 0 0 10px 1px black;
 z-index: 10;
 opacity: 0.9;
 }
@@ -332,25 +332,26 @@ line-height: 32px;
 font-size: 18px;
 text-align: center;
 color: black;
-background: rgb(220, 4, 4);
+background: black;
+box-shadow: 0 0 16px black;
 }
 
 .overlay_close_x {
 top: 48px;
-left: 14px;
+left: 13px;
 right: 300px;
-width: 25px;
-height: 22px;
+width: 27px;
+height: 27px;
 position: relative;
 font-family: cursive;
-font-size: 20px;
+font-size: 24px;
 font-weight: bold;
 color: white;
 }
 
 .overlay_close_x:hover {
 cursor: pointer;
-color: black;
+color: red;
 }
 
 .overlay_side_price {
