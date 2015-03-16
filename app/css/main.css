@@ -54,7 +54,7 @@ height: 26px;
 left: 11px;
 margin-bottom: 15px;
 border-radius: 50px;
-box-shadow: 0 0 5px gray;
+box-shadow: inset 0 0 4px 1px black;
 }
 
 
@@ -68,13 +68,13 @@ color: rgb(0, 42, 139);
 
 .search_bar_bn {
 position: absolute;
-top: 0px;
-right: 0px;
-width: 26px;
-height: 26px;
+top: 2px;
+right: 2px;
+width: 22px;
+height: 22px;
 background: orange;
 border-radius: 26px;
-box-shadow: 0 0 1px gray;
+box-shadow: 0 0 2px 1px rgb(48, 48, 48);
 }
 
 .search_bar_bn:hover {
@@ -147,11 +147,11 @@ padding-bottom: 4px;
 .app_unit {
 position: relative;
 float: left;
-width: calc(25% - 16px);
-height: 170px;
+width: calc(25vw - 75px);
+height: 13vw;
 margin: 8px;
 background: rgb(219, 219, 219);
-box-shadow: 0px 0px 4px gray;
+box-shadow: 0px 0px 6px gray;
 }
 
 .app_unit:hover {
@@ -160,8 +160,8 @@ cursor: pointer;
 
 .app_mask {
 width: 100%;
-height: 46px;
-top: 124px;
+height: 44px;
+top: calc(100% - 45px);
 background: rgba(255, 255, 255, 0.8);
 position: absolute;
 }
@@ -169,7 +169,7 @@ position: absolute;
 .app_name {
 position: absolute;
 left: 9px;
-top: 128px;
+bottom: 20px;
 font-family: arial;
 font-size: 16px;
 color: rgb(62, 62, 62);
@@ -178,7 +178,7 @@ color: rgb(62, 62, 62);
 .app_brief {
 position: absolute;
 left: 10px;
-top: 149px;
+bottom: 4px;
 font-family: arial;
 font-size: 13px;
 color: rgb(115, 115, 115);
@@ -186,8 +186,8 @@ color: rgb(115, 115, 115);
 
 .app_price {
 position: absolute;
-left: 236px;
-top: 147px;
+right: 8px;
+bottom: 21px;
 font-family: arial;
 font-size: 14px;
 color: rgb(51,176,240);
@@ -196,8 +196,15 @@ color: rgb(51,176,240);
 .overlay_app_certified {
 position: absolute;
 top: -7px;
-right: -6px;
-width: 75px;
+right: -8px;
+width: 78px;
+}
+
+.overlay_app_admin {
+position: absolute;
+top: -3px;
+right: -3px;
+width: 42px;
 }
 
 #overlay_container {
@@ -249,7 +256,7 @@ position: absolute;
 top: 61px;
 left: 36px;
 width: calc(100% - 270px);
-height: calc(100% - 85px);
+height: calc(100% - 115px);
 border-bottom-right-radius: 10px;
 border-bottom-left-radius: 10px;
 box-shadow: 0 0 10px 1px black;
