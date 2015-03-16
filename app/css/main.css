@@ -286,8 +286,6 @@ font-size: 20px;
 font-weight: bold;
 color: white;
 z-index: 11;
--webkit-transition: opacity .2s ease;
--moz-transition: opacity .2s ease;
 }
 
 .overlay_app_logo:hover .overlay_app_get {
@@ -373,8 +371,6 @@ font-family: arial;
 font-size: 20px;
 font-weight: bold;
 color: white;
--webkit-transition: opacity .2s ease;
--moz-transition: opacity .2s ease;
 }
 
 .overlay_side_price:hover .overlay_side_get {
