@@ -209,30 +209,34 @@ width: 42px;
 
 #overlay_container {
 position: absolute;
-top: 0px;
-left: 200px;
-width: calc(100% - 200px);
-height: 100%;
+top: 15px;
+left: 215px;
+width: calc(100% - 245px);
+height: calc(100% - 30px);
+border-radius: 15px;
+box-shadow: 0 0 8px 0px black;
 z-index: 1;
-background: #066dab; /* Old browsers */
-background: -moz-linear-gradient(top,  #066dab 0%, #8abbd7 69%, #c5deea 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#066dab), color-stop(69%,#8abbd7), color-stop(100%,#c5deea)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #066dab 0%,#8abbd7 69%,#c5deea 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #066dab 0%,#8abbd7 69%,#c5deea 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #066dab 0%,#8abbd7 69%,#c5deea 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #066dab 0%,#8abbd7 69%,#c5deea 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#066dab', endColorstr='#c5deea',GradientType=0 ); /* IE6-9 */
+overflow: hidden;
+/*background: rgba(220, 220, 220, 1);*/
+background: #066dab;
+background: -moz-linear-gradient(top, #066dab 0%, #8abbd7 69%, #c5deea 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#066dab), color-stop(69%,#8abbd7), color-stop(100%,#c5deea));
+background: -webkit-linear-gradient(top, #066dab 0%,#8abbd7 69%,#c5deea 100%);
+background: -o-linear-gradient(top, #066dab 0%,#8abbd7 69%,#c5deea 100%);
+background: -ms-linear-gradient(top, #066dab 0%,#8abbd7 69%,#c5deea 100%);
+background: linear-gradient(to bottom, #066dab 0%,#8abbd7 69%,#c5deea 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#066dab', endColorstr='#c5deea',GradientType=0 );
 }
 
 .overlay_app_header {
 position: absolute;
-top: 32px;
-left: 37px;
+top: 19px;
+left: 19px;
 background: repeating-linear-gradient( -55deg, #222, #222 10px, #555 10px, #555 20px );
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 height: 28px;
-width: calc(100% - 270px);
+width: calc(100% - 245px);
 z-index: 4;
 box-shadow: 0 0 10px black;
 }
@@ -253,10 +257,10 @@ float: center;
 
 .overlay_iframe_container{
 position: absolute;
-top: 61px;
-left: 36px;
-width: calc(100% - 270px);
-height: calc(100% - 88px);
+top: 48px;
+left: 19px;
+width: calc(100% - 245px);
+height: calc(100% - 67px);
 border-bottom-right-radius: 10px;
 border-bottom-left-radius: 10px;
 box-shadow: 0 0 10px 1px black;
@@ -266,8 +270,8 @@ z-index: 3;
 
 .overlay_app_logo {
 position: absolute;
-top: 13px;
-left: 16px;
+top: 5px;
+left: 5px;
 }
 
 .overlay_app_img {
@@ -280,9 +284,9 @@ background: rgb(51, 176, 240);
 border-radius: 12px;
 margin-top: 0;
 margin-left: 0;
-box-shadow: 0 0 10px 2px black;
+box-shadow: 0 0 2px 0px black;
 z-index: 10;
-opacity: 0.8;
+opacity: 0.9;
 }
 
 .overlay_app_get {
@@ -328,7 +332,7 @@ line-height: 32px;
 font-size: 18px;
 text-align: center;
 color: black;
-background: rgba(0,0,0,0.5);
+background: rgb(220, 4, 4);
 }
 
 .overlay_close_x {
@@ -346,14 +350,14 @@ color: white;
 
 .overlay_close_x:hover {
 cursor: pointer;
-color: red;
+color: black;
 }
 
 .overlay_side_price {
 position: absolute;
-top: 31px;
-right: 44px;
-width: 165px;
+top: 50px;
+right: 24px;
+width: 175px;
 height: 50px;
 font-family: arial;
 font-weight: bold;
@@ -378,8 +382,8 @@ position: absolute;
 opacity: 0;
 background: #ff9d00;
 top: 0px;
-left: 0px;
-width: 165px;
+right: 0px;
+width: 175px;
 height: 50px;
 border-radius: 12px;
 font-family: arial;
@@ -392,23 +396,17 @@ color: white;
 opacity:1;
 cursor: pointer;
 }
-.overlay_brief {
-position: absolute;
-top: 85px;
-right: 61px;
-width: 132px;
-}
 .overlay_review {
 position: absolute;
-top: 85px;
-right: 61px;
-width: 132px;
+top: 106px;
+right: 24px;
+width: 175px;
+text-align: center;
 }
 .overlay_user_number {
 position: absolute;
 top: 37px;
-left: 0px;
-width: 132px;
+width: 175px;
 text-align: center;
 font-family: arial;
 font-size: 18px;
