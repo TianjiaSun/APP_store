@@ -10,7 +10,7 @@ bottom: 0px;
 left: 0px;
 right: 0px;
 background-color: rgb(246,246,246);
-overflow: none;
+overflow: hidden;
 }
 
 #category_container {
@@ -211,19 +211,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#066dab', end
 
 .overlay_app_header {
 position: absolute;
-top: 16px;
-left: 16px;
-background: repeating-linear-gradient(
-  -55deg,
-  #222,
-  #222 10px,
-  #555 10px,
-  #555 20px
-);
+top: 32px;
+left: 37px;
+background: repeating-linear-gradient( -55deg, #222, #222 10px, #555 10px, #555 20px );
 border-top-left-radius: 10px;
 border-top-right-radius: 10px;
 height: 28px;
-width: calc(100% - 220px);
+width: calc(100% - 270px);
 z-index: 4;
 box-shadow: 0 0 10px black;
 }
@@ -244,15 +238,61 @@ float: center;
 
 .overlay_iframe_container{
 position: absolute;
-top: 44px;
-left: 16px;
-width: calc(100% - 220px);
-height: calc(100% - 62px);
+top: 61px;
+left: 36px;
+width: calc(100% - 270px);
+height: calc(100% - 85px);
 border-bottom-right-radius: 10px;
 border-bottom-left-radius: 10px;
 box-shadow: 0 0 10px 1px black;
 overflow: hidden;
 z-index: 3;
+}
+
+.overlay_app_logo {
+position: absolute;
+top: 13px;
+left: 16px;
+}
+
+.overlay_app_img {
+position: absolute;
+top: 0px;
+left: 0px;
+width: 56px;
+height: 56px;
+background: rgb(51, 176, 240);
+border-radius: 12px;
+margin-top: 0;
+margin-left: 0;
+box-shadow: 0 0 10px 2px black;
+z-index: 10;
+opacity: 0.8;
+}
+
+.overlay_app_get {
+position: absolute;
+opacity: 0;
+background: #ff9d00;
+top: 0px;
+left: 0px;
+width: 56px;
+height: 56px;
+line-height: 56px;
+text-align: center;
+border-radius: 12px;
+font-family: arial;
+font-size: 20px;
+font-weight: bold;
+color: white;
+z-index: 11;
+-webkit-transition: opacity .2s ease;
+-moz-transition: opacity .2s ease;
+}
+
+.overlay_app_logo:hover .overlay_app_get {
+opacity:1;
+cursor: pointer;
 }
 
 .full {
@@ -263,153 +303,134 @@ overflow: hidden;
 
 .overlay_close {
 position: absolute;
-top: 17px;
-right: 14px;
-width: 174px;
-height: 32px;
+top: -45px;
+float: right;
+right: -45px;
+width: 90px;
+height: 90px;
+border-radius: 45px;
 font-family: arial;
 font-weight: bold;
 line-height: 32px;
 font-size: 18px;
-border-radius: 5px;
 text-align: center;
 color: black;
-box-shadow: 0 0 8px black;
-background: #ff9d00;
+background: rgba(0,0,0,0.5);
 }
 
-.overlay_close:hover {
-cursor: pointer;
-background: #C70000;
+.overlay_close_x {
+top: 48px;
+left: 14px;
+right: 300px;
+width: 25px;
+height: 22px;
+position: relative;
+font-family: cursive;
+font-size: 20px;
+font-weight: bold;
 color: white;
 }
 
-.overlay_install {
+.overlay_close_x:hover {
+cursor: pointer;
+color: red;
+}
+
+.overlay_side_price {
 position: absolute;
-top: 61px;
-right: 14px;
-width: 174px;
-height: 32px;
+top: 31px;
+right: 44px;
+width: 165px;
+height: 50px;
 font-family: arial;
 font-weight: bold;
-line-height: 32px;
-font-size: 18px;
-border-radius: 5px;
-text-align: center;
-color: black;
-box-shadow: 0 0 8px black;
-background: #ff9d00;
-}
-
-.overlay_install:hover {
-cursor: pointer;
-background: #189C00;
-color: white;
-}
-
-.overlay_app_edge {
-position: absolute;
-float: right;
-top: 114px;
-right: 130px;
-width: 58px;
-height: 62px;
-background: rgb(0, 0, 0);
-border-radius: 14px;
-margin-top: 9px;
-margin-left: 0;
-box-shadow: 0 1px 2px 0px black;
-}
-
-.overlay_app_img {
-position: absolute;
-float: right;
-top: 124px;
-right: 131px;
-width: 56px;
-height: 56px;
-background: rgb(51, 176, 240);
+line-height: 50px;
+font-size: 20px;
 border-radius: 12px;
-margin-top: 0;
-margin-left: 0;
-box-shadow: 0 0 0px 2px white;
+text-align: center;
+color: black;
+box-shadow: 0 0 8px black;
+background: #eeeeee;
+background: -moz-linear-gradient(top, #eeeeee 0%, #cccccc 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#cccccc));
+background: -webkit-linear-gradient(top, #eeeeee 0%,#cccccc 100%);
+background: -o-linear-gradient(top, #eeeeee 0%,#cccccc 100%);
+background: -ms-linear-gradient(top, #eeeeee 0%,#cccccc 100%);
+background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 );
 }
 
-.overlay_name {
+.overlay_side_get {
 position: absolute;
-float: left;
-right: 0;
-top: 122px;
+opacity: 0;
+background: #ff9d00;
+top: 0px;
+left: 0px;
+width: 165px;
+height: 50px;
+border-radius: 12px;
 font-family: arial;
-font-size: 17px;
-margin-bottom: 5px;
-color: rgb(229, 229, 229);
+font-size: 20px;
 font-weight: bold;
-width: 120px;
+color: white;
+-webkit-transition: opacity .2s ease;
+-moz-transition: opacity .2s ease;
 }
 
-.overlay_price {
-position: absolute;
-float: left;
-right: 0;
-top: 144px;
-font-family: arial;
-font-size: 17px;
-margin-bottom: 5px;
-color: orange;
-font-weight: bold;
-width: 120px;
+.overlay_side_price:hover .overlay_side_get {
+opacity:1;
+cursor: pointer;
 }
-
 .overlay_brief {
 position: absolute;
-float: left;
-right: 12px;
-top: 200px;
+top: 85px;
+right: 61px;
+width: 132px;
+}
+.overlay_review {
+position: absolute;
+top: 85px;
+right: 61px;
+width: 132px;
+}
+.overlay_user_number {
+position: absolute;
+top: 37px;
+left: 0px;
+width: 132px;
+text-align: center;
 font-family: arial;
-font-size: 15px;
-margin-bottom: 5px;
-color: rgb(229, 229, 229);
-width: 176px;
-text-align: justify;
-text-justify: inter-word;
+font-size: 18px;
+color: white;
+}
+.star-icon {
+    color: #ddd;
+    font-size: 2em;
+    position: relative;
+}
+.star-icon.full:before {
+    text-shadow: 0 0 2px rgba(0,0,0,0.7);
+    color: white;
+    content: '\2605'; /* Full star in UTF-8 */
+    position: absolute;
+    left: 0;
+}
+.star-icon.half:before {
+    text-shadow: 0 0 2px rgba(0,0,0,0.7);
+    color: white;
+    content: '\2605'; /* Full star in UTF-8 */
+    position: absolute;
+    left: 0;
+    width: 50%;
+    overflow: hidden;
+}
+@-moz-document url-prefix() { /* Firefox Hack :( */
+  .star-icon {
+    font-size: 50px;
+    line-height: 34px;
+  }
 }
 
-.overlay_snapshot {
-position: absolute;
-float: left;
-right: 0;
-bottom: 246px;
-font-family: arial;
-font-size: 17px;
-margin-bottom: 5px;
-color: rgb(229, 229, 229);
-font-weight: bold;
-width: 188px;
-}
-
-.overlay_snapshot_1 {
-position: absolute;
-bottom: 138px;
-width: 174px;
-height: 108px;
-background: rgb(232, 232, 232);
-right: 14px;
-float: right;
-clear: right;
-border-radius: 5px;
-}
-
-.overlay_snapshot_2 {
-position: absolute;
-bottom: 18px;
-width: 174px;
-height: 108px;
-background: rgb(232, 232, 232);
-right: 14px;
-float: left;
-border-radius: 5px;
-}
 
 .fadeIn {
         /* CSS needed for animation
