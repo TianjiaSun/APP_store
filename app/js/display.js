@@ -1,7 +1,9 @@
 $(document).ready(function() {
 
+  $("#overlay_container").hide();
+
   $(".app_unit").click(function() {
-    $("#overlay_container").fadeIn(600);   
+    $("#overlay_container").show();
   });
 
   $(".overlay_close").click(function() {
