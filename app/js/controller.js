@@ -3,7 +3,7 @@
 var store = angular.module('store',['ngRoute'])
   .controller('StoreListCtrl', function($scope, $http, $route, $routeParams, $sce, $timeout) {
 
-  $scope.myClass = [];
+  $scope.header = "Recommended";
 
   $scope.data;
   var req = {
@@ -23,13 +23,6 @@ var store = angular.module('store',['ngRoute'])
 
   // open detail page for one app
   $scope.openApp = function(app) {
-    // add animation class
-    //$scope.myClass.push('flash');
-    //$scope.myClass.push('animated');
-    // remove animation class
-    //$scope.myClass.pop('flash');
-    //$scope.myClass.pop('animated');
-
     // firstly move overlay container into window
     $scope.app_path = $sce.trustAsResourceUrl(app.path);
     $scope.app = app;
@@ -45,6 +38,14 @@ var store = angular.module('store',['ngRoute'])
     $("#overlay_container").hide();
     $("#movein_container").hide();
     $("#list_container").fadeIn(500);
+  }
+
+  $scope.filterCAT = function(catalog) {
+    console.log(catalog);
+    $scope.header = catalog;
+    // filter with catalog info
+    // one app can include multiple catalog info
+    
   }
 
 })

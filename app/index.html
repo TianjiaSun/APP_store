@@ -24,33 +24,33 @@
       <div class="search_bar_input">Search</div>
       <div class="search_bar_bn"></div>
     </div>
-    <div class="main_navigator_h1">Recommended</div>
-    <div class="main_navigator_h1">Business Tools</div>
-      <div class="main_navigator_h2">Administrative</div>
-      <div class="main_navigator_h2">Advertising</div>
-      <div class="main_navigator_h2">Analytics</div>
-      <div class="main_navigator_h2">Collaborative</div>
-      <div class="main_navigator_h2">Customer Relationship</div>
-      <div class="main_navigator_h2">e-Commerce</div>
-      <div class="main_navigator_h2">Financial</div>
-      <div class="main_navigator_h2">Human Resource</div>
-      <div class="main_navigator_h2">Inventory</div>
-      <div class="main_navigator_h2">Manufacturing</div>
-      <div class="main_navigator_h2">Marketing</div>
-      <div class="main_navigator_h2">Projects</div>
-      <div class="main_navigator_h2">Public Relationship</div>
-      <div class="main_navigator_h2">Research</div>
-      <div class="main_navigator_h2">Risk</div>
-      <div class="main_navigator_h2">Supplier</div>
-      <div class="main_navigator_h2">Tax</div>
-    <div class="main_navigator_h1">Productivity</div>
-    <div class="main_navigator_h1">Training</div>
-    <div class="main_navigator_h1">Utilities</div>
-    <div class="main_navigator_h1">Developers</div>
+    <div class="main_navigator_h1" ng-click="filterCAT('Recommended')">Recommended</div>
+    <div class="main_navigator_h1" ng-click="filterCAT('Business Tools')">Business Tools</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Administrative')">Administrative</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Advertising')">Advertising</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Analytics')">Analytics</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Collaborative')">Collaborative</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Customer')">Customer</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('e-Commerce')">e-Commerce</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Financial')">Financial</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Human Resource')">Human Resource</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Inventory')">Inventory</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Manufacturing')">Manufacturing</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Marketing')">Marketing</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Projects')">Projects</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Public Relationship')">Public Relationship</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Research')">Research</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Risk')">Risk</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Supplier')">Supplier</div>
+      <div class="main_navigator_h2" ng-click="filterCAT('Tax')">Tax</div>
+    <div class="main_navigator_h1" ng-click="filterCAT('Productivity')">Productivity</div>
+    <div class="main_navigator_h1" ng-click="filterCAT('Training')">Training</div>
+    <div class="main_navigator_h1" ng-click="filterCAT('Utilities')">Utilities</div>
+    <div class="main_navigator_h1" ng-click="filterCAT('Developers')">Developers</div>
   </div>
   
   <div id="list_container">
-    <div class="page_header">Recommended</div>
+    <div class="page_header" ng-class="headerClass">{{header}}</div>
     <div ng-repeat="app in apps">
       <div class="app_unit" ng-click="openApp(app)">
         <div class="app_mask"></div>
@@ -66,7 +66,7 @@
     <div class="overlay_close_x" ng-click="closeApp()"></div>
     <div class="overlay_app_header">
       <div class="overlay_app_header_name">{{app.name}} 
-        <span style="font-size: 14px;">(Powered by DirectExperience)</span>
+        <span style="font-size: 14px;">(Direct Experience in Store)</span>
       </div>
     </div>
     <div class="overlay_iframe_container">
@@ -86,7 +86,7 @@
     <div class="overlay_name">{{app.name}}</div>
     <div class="overlay_brief">{{app.brief}}</div>
     <div class="overlay_side_price">FREE
-      <div class="overlay_side_get" ng-class="myClass">GET</div>
+      <div class="overlay_side_get">GET</div>
     </div>
     <div class="overlay_review">
       <div class="overlay_user_number">1,034 Users</div>
@@ -96,9 +96,7 @@
       <span class="star-icon half">☆</span>
       <span class="star-icon">☆</span>
     </div>
-    <div class="overlay_related">Related APPs
-
-    </div>
+    <!-- <div class="overlay_related">Related APPs</div> -->
   </div>
 
 
