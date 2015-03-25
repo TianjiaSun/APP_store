@@ -7,6 +7,7 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
@@ -45,127 +46,49 @@
     <div class="main_navigator_h1">Productivity</div>
     <div class="main_navigator_h1">Training</div>
     <div class="main_navigator_h1">Utilities</div>
-    <div class="main_navigator_h1">Other</div>
+    <div class="main_navigator_h1">Developers</div>
   </div>
   
-  <div class="detail_container">
+  <div id="list_container">
     <div class="page_header">Recommended</div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Customers</div>
-      <div class="app_brief">Maintain all your customers</div>
-      <div class="app_price">FREE</div>
-      <img class="overlay_app_certified" src="img/certified.png"/>
-<!--       <img class="overlay_app_admin" src="img/admin.png"/> -->
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-<!--       <img class="overlay_app_admin" src="img/admin.png"/> -->
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-      <img class="overlay_app_certified" src="img/certified.png"/>
-<!--       <img class="overlay_app_admin" src="img/admin.png"/> -->
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-      <img class="overlay_app_certified" src="img/certified.png"/>
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
-    </div>
-    <div class="app_unit">
-      <div class="app_mask"></div>
-      <div class="app_name">Calculator</div>
-      <div class="app_brief">Management your customers</div>
-      <div class="app_price">FREE</div>
+    <div ng-repeat="app in apps">
+      <div class="app_unit" ng-click="openApp(app)">
+        <div class="app_mask"></div>
+        <div class="app_name">{{app.name}}</div>
+        <div class="app_brief">{{app.brief}}</div>
+        <div class="app_price">{{app.price}}</div>
+        <img class="overlay_app_certified" ng-show="app.certified == true" src="img/certified.png"/>
+      </div>
     </div>
   </div>
 
   <div id="overlay_container" hidden>
-<!--     <div class="overlay_app_logo">
-      <img class="overlay_app_img" src="http://asa.static.gausian.com/user_app/Developer/icon.png"/>
-      <div class="overlay_app_get">GET</div>
-    </div> -->
+    <div class="overlay_close_x" ng-click="closeApp()"></div>
     <div class="overlay_app_header">
-      <div class="overlay_app_header_name">Customer 
-        <span style="font-size: 14px;">(For Experience)</span>
+      <div class="overlay_app_header_name">{{app.name}} 
+        <span style="font-size: 14px;">(Powered by DirectExperience)</span>
       </div>
     </div>
     <div class="overlay_iframe_container">
-      <iframe 
+      <iframe
         class="full" 
         frameBorder="0" 
-        src="http://gausian-developers.github.io/user-app-template5/app/index.html">
+        onload="iframeLoadedCallBack()"
+        ng-src="{{app_path}}" >
       </iframe>
     </div>
-    <div class="overlay_close">
-      <div class="overlay_close_x"></div>
+  </div>
+
+  <div id="movein_container" hidden>
+    <div class="overlay_close_x_2" ng-click="closeApp()"></div>
+    <div class="overlay_app_logo" >
+      <img class="overlay_app_img" src="{{app.icon}}"/>
     </div>
+    <div class="overlay_name">{{app.name}}</div>
+    <div class="overlay_brief">{{app.brief}}</div>
     <div class="overlay_side_price">FREE
-      <div class="overlay_side_get">GET</div>
+      <div class="overlay_side_get" ng-class="myClass">GET</div>
     </div>
-    <div class="overlay_brief"></div>
     <div class="overlay_review">
       <div class="overlay_user_number">1,034 Users</div>
       <span class="star-icon full">☆</span>
@@ -174,9 +97,11 @@
       <span class="star-icon half">☆</span>
       <span class="star-icon">☆</span>
     </div>
-    <div class="overlay_competitor">
+    <div class="overlay_related">Related APPs
+
     </div>
   </div>
+
 
     <script src="jquery-1.11.2.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
