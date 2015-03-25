@@ -32,20 +32,27 @@ var store = angular.module('store',['ngRoute'])
     $timeout(function(){ $("#overlay_container").fadeIn(500); }, 550);
   }
 
+  $scope.setup = function() {
+    alert("done");
+    console.log("done");
+  }
+
   $scope.closeApp = function() {
     $scope.app = null;
     $scope.app_path = $sce.trustAsResourceUrl(null);
     $("#overlay_container").hide();
     $("#movein_container").hide();
     $("#list_container").fadeIn(500);
+    $('#iframe_cover_before_loaded').show();
   }
 
   $scope.filterCAT = function(catalog) {
     console.log(catalog);
+    $(".page_header").hide();
     $scope.header = catalog;
+    $(".page_header").fadeIn(500);
     // filter with catalog info
     // one app can include multiple catalog info
-    
   }
 
 })
