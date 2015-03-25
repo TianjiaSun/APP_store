@@ -47,8 +47,4 @@ var store = angular.module('store',['ngRoute'])
     $("#list_container").fadeIn(500);
   }
 
-  $scope.iframeLoadedCallBack = function(){
-    alert("iframe loaded");
-  }
-
 })
