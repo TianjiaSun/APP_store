@@ -15,14 +15,14 @@
   <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
   <title>GAUSIAN Store</title>
 </head>
-<body ng-controller="StoreListCtrl" style="overflow: hidden;">
+<body data-ng-controller="StoreListCtrl" data-ng-init="init()" style="overflow: hidden;">
 <div class="whole_container">
 
   <div id="category_container">
     <div class="logo">GAUSIAN Store</div>
     <div class="search_bar">
-      <div class="search_bar_input">Search</div>
-      <div class="search_bar_bn"></div>
+      <input class="search_bar_input" placeholder="Search..." ng-model="query" ng-keydown="Search($event)"></input>
+      <div class="search_bar_bn" ng-click="ClickSearch()"></div>
     </div>
     <div class="main_navigator_h1" ng-click="filterCAT('Recommended')">Recommended</div>
     <div class="main_navigator_h1" ng-click="filterCAT('Business Tools')">Business Tools</div>
@@ -49,9 +49,25 @@
     <div class="main_navigator_h1" ng-click="filterCAT('Developers')">Developers</div>
   </div>
   
-  <div id="list_container">
-    <div class="page_header" ng-class="headerClass">{{header}} ({{filterredApps.length}})</div>
+  <div id="list_container" hidden>
+    <div class="page_header">{{header}} ({{filterredApps.length}})</div>
     <div ng-repeat="app in filterredApps">
+      <div class="app_unit" ng-click="openApp(app)">
+        <img class="app_ad" src="{{app.ad}}"/>
+        <div class="app_gradient"></div>
+        <div class="app_mask"></div>
+        <div class="app_name">{{app.name}}</div>
+        <div class="app_brief">{{app.brief}}</div>
+        <div class="app_price">{{app.pricing}}</div>
+        <img class="app_icon" src="{{app.icon}}"/>
+        <img class="overlay_app_certified" ng-show="app.certified == 'true'" src="img/certified.png"/>
+      </div>
+    </div>
+  </div>
+
+  <div id="search_container" hidden>
+    <div class="page_header">{{search_header}}</div>
+    <div ng-repeat="app in searchedApps">
       <div class="app_unit" ng-click="openApp(app)">
         <img class="app_ad" src="{{app.ad}}"/>
         <div class="app_gradient"></div>

@@ -23,11 +23,17 @@ var store = angular.module('store',['ngRoute'])
     var j=0;
     for(var i=0; i<$scope.apps.length; i++){
       var app = $scope.apps[i];
+      // scope.header = Recommended at this moment
       if(app.catalog.match($scope.header)){
         $scope.filterredApps[j++] = app;
       }
     }
   });
+
+  // to avoid flashing during page loading
+  $scope.init = function () {
+    $("#list_container").fadeIn(1000);
+  };
 
   // open detail page for one app
   $scope.openApp = function(app) {
@@ -35,6 +41,7 @@ var store = angular.module('store',['ngRoute'])
     $scope.app_path = $sce.trustAsResourceUrl(app.path);
     $scope.app = app;
     $("#list_container").fadeOut(500);
+    $("#search_container").fadeOut(500);
     $("#movein_container").show();
     // secondly show iframe container
     $timeout(function(){ $("#overlay_container").fadeIn(500); }, 550);
@@ -47,6 +54,7 @@ var store = angular.module('store',['ngRoute'])
 
   $scope.closeApp = function() {
     $scope.app = null;
+    $scope.search_header = null;
     $scope.app_path = $sce.trustAsResourceUrl(null);
     $("#overlay_container").hide();
     $("#movein_container").hide();
@@ -56,6 +64,7 @@ var store = angular.module('store',['ngRoute'])
 
   $scope.filterCAT = function(catalog) {
     $scope.header = catalog;
+    $("#search_container").hide();
     $("#list_container").hide();
     // filter with catalog info
     $scope.filterredApps = [];
@@ -68,6 +77,65 @@ var store = angular.module('store',['ngRoute'])
     }
     $("#list_container").fadeIn(500);
     //$timeout(function(){ $(".app_unit").fadeIn(100); }, 800); 
+  }
+
+  $scope.Search = function(keyEvent) {
+    // if enter is input in search box
+    if (keyEvent.which === 13){
+      // hide list page
+      $("#list_container").hide();
+      $("#search_container").hide();
+      $scope.searchedApps = [];
+      var j=0;
+      for(var i=0; i<$scope.apps.length; i++){
+        var app = $scope.apps[i];
+        if(app.keyword.match(angular.lowercase($scope.query))){
+          $scope.searchedApps[j++] = app;
+        }
+      }
+      $("#search_container").fadeIn(500);
+      if($scope.searchedApps.length === 0) {
+        $scope.search_header = "Sorry, no matching APP.";
+      }
+      else if($scope.searchedApps.length === 1) {
+        $scope.search_header = "There is one result:";
+      }
+      else {
+        $scope.search_header = "There are " + $scope.searchedApps.length + " results:";
+      }
+    }
+    // if escape is input in search box
+    if (keyEvent.which === 27){
+      // close search result
+      $("#search_container").hide();
+      $("#list_container").fadeIn(500);
+      $scope.search_header = null;
+      $scope.query = null;
+    }
+  }
+
+  $scope.ClickSearch = function() {
+    // hide list page
+    $("#list_container").hide();
+    $("#search_container").hide();
+    $scope.searchedApps = [];
+    var j=0;
+    for(var i=0; i<$scope.apps.length; i++){
+      var app = $scope.apps[i];
+      if(app.keyword.match($scope.query)){
+        $scope.searchedApps[j++] = app;
+      }
+    }
+    if($scope.searchedApps.length === 0) {
+      $scope.search_header = "Sorry, no matching APP.";
+    }
+    else if($scope.searchedApps.length === 1) {
+      $scope.search_header = "There is one result:";
+    }
+    else {
+      $scope.search_header = "There are " + $scope.searchedApps.length + " results:";
+    }
+    $("#search_container").fadeIn(500);
   }
 
 })
