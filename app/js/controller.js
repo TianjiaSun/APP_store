@@ -18,7 +18,15 @@ var store = angular.module('store',['ngRoute'])
   // get app info from ASA
   $http(req).success(function(data) {
     $scope.apps = angular.fromJson(data.response);
-    console.log($scope.apps);
+    // open Recommended page
+    $scope.filterredApps = [];
+    var j=0;
+    for(var i=0; i<$scope.apps.length; i++){
+      var app = $scope.apps[i];
+      if(app.catalog.match($scope.header)){
+        $scope.filterredApps[j++] = app;
+      }
+    }
   });
 
   // open detail page for one app
@@ -47,12 +55,19 @@ var store = angular.module('store',['ngRoute'])
   }
 
   $scope.filterCAT = function(catalog) {
-    console.log(catalog);
-    $(".page_header").hide();
     $scope.header = catalog;
-    $(".page_header").fadeIn(500);
+    $("#list_container").hide();
     // filter with catalog info
-    // one app can include multiple catalog info
+    $scope.filterredApps = [];
+    var j=0;
+    for(var i=0; i<$scope.apps.length; i++){
+      var app = $scope.apps[i];
+      if(app.catalog.match($scope.header)){
+        $scope.filterredApps[j++] = app;
+      }
+    }
+    $("#list_container").fadeIn(500);
+    //$timeout(function(){ $(".app_unit").fadeIn(100); }, 800); 
   }
 
 })

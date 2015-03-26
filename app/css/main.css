@@ -11,6 +11,7 @@ left: 0px;
 right: 0px;
 background-color: rgb(246,246,246);
 overflow: hidden;
+min-width: 1024px;
 }
 
 #category_container {
@@ -20,7 +21,7 @@ left: 0px;
 width: 200px;
 height: 100%;
 z-index: 2;
-box-shadow: 0 0 8px black;
+box-shadow: 0 0 1.3vh black;
 /*border-right-style: solid;
 border-right-width: 1px;
 border-right-color: rgb(215, 215, 215);*/
@@ -41,7 +42,7 @@ font-family: arial;
 font-size: 22px;
 text-align: left;
 position: relative;
-color: #DDDDDD;
+color: #FFFFFF;
 font-weight: bold;
 margin-bottom: 26px;
 }
@@ -82,7 +83,7 @@ background: orange;
 }
 
 .main_navigator_h1 {
-font-size: 16px;
+font-size: 2.1vh;
 font-family: Arial;
 height: 3.5vh;
 width: 180px;
@@ -92,7 +93,7 @@ padding-left: 0px;
 padding-bottom: 7px;
 margin-left: 16px;
 margin-right: 0px;
-color: #F7F7F7;
+color: #FFFFFF;
 }
 
 .main_navigator_h1:hover {
@@ -101,7 +102,7 @@ color: orange;
 }
 
 .main_navigator_h2 {
-font-size: 15px;
+font-size: 2vh;
 font-family: Arial;
 height: 3.2vh;
 width: 179px;
@@ -111,7 +112,7 @@ padding-left: 7px;
 margin-left: 20px;
 margin-right: 0px;
 border-color: #33CCFF;
-color: #DDDDDD;
+color: #EEEEEE;
 }
 
 .main_navigator_h2:hover {
@@ -148,10 +149,12 @@ padding-bottom: 4px;
 position: relative;
 float: left;
 width: calc(25vw - 75px);
+min-width: 250px;
+min-height: 170px;
 height: 13vw;
 margin: 8px;
 background: rgb(219, 219, 219);
-box-shadow: 0px 0px 5px gray;
+box-shadow: 0px 0px 1vh rgb(95, 95, 95);
 -webkit-transition: 0.3s ease-in-out;
 -moz-transition: 0.3s ease-in-out;
 -o-transition: 0.3s ease-in-out;
@@ -163,7 +166,7 @@ background: red;
 }
 
 .app_unit:hover {
-box-shadow: 0px 0px 8px black;
+box-shadow: 0px 0px 1.3vh rgb(0, 0, 0);
 cursor: pointer;
 -webkit-transform: scale(1.01) rotate(3deg);
 -moz-transform: scale(1.01) rotate(3deg);
@@ -258,16 +261,16 @@ width: 42px;
 }
 
 #overlay_container {
-position: absolute;
-top: 15px;
-left: 225px;
-width: calc(100% - 260px);
-height: calc(100% - 30px);
-border-radius: 15px;
-box-shadow: 0 0 8px 0px black;
-z-index: 1;
-overflow: hidden;
-background: #066dab;
+  position: absolute;
+  top: 30px;
+  left: 234px;
+  width: calc(100% - 270px);
+  height: calc(100% - 60px);
+  border-radius: 15px;
+  box-shadow: 0 0 1.3vh black;
+  z-index: 1;
+  overflow: hidden;
+  background: #066dab;
 }
 
 #movein_container {
@@ -277,7 +280,7 @@ left: 0px;
 width: 200px;
 height: 100%;
 z-index: 2;
-box-shadow: 0 0 8px black;
+box-shadow: 0 0 1.3vh black;
 background: #23538a; /* Old browsers */
 background: -moz-linear-gradient(top,  #23538a 0%, #5db9dd 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#23538a), color-stop(100%,#5db9dd)); /* Chrome,Safari4+ */

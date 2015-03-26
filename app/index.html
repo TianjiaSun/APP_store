@@ -50,8 +50,8 @@
   </div>
   
   <div id="list_container">
-    <div class="page_header" ng-class="headerClass">{{header}}</div>
-    <div ng-repeat="app in apps">
+    <div class="page_header" ng-class="headerClass">{{header}} ({{filterredApps.length}})</div>
+    <div ng-repeat="app in filterredApps">
       <div class="app_unit" ng-click="openApp(app)">
         <img class="app_ad" src="{{app.ad}}"/>
         <div class="app_gradient"></div>
