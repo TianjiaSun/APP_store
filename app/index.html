@@ -51,7 +51,7 @@
   
   <div id="list_container" hidden>
     <div class="page_header">{{header}} ({{filterredApps.length}})</div>
-    <div ng-repeat="app in filterredApps">
+    <div ng-repeat="app in filterredApps | orderBy:'-certified'">
       <div class="app_unit" ng-click="openApp(app)">
         <img class="app_ad" src="{{app.ad}}"/>
         <div class="app_gradient"></div>
@@ -67,7 +67,7 @@
 
   <div id="search_container" hidden>
     <div class="page_header">{{search_header}}</div>
-    <div ng-repeat="app in searchedApps">
+    <div ng-repeat="app in searchedApps | orderBy:'-certified'">
       <div class="app_unit" ng-click="openApp(app)">
         <img class="app_ad" src="{{app.ad}}"/>
         <div class="app_gradient"></div>
