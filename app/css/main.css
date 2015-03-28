@@ -287,10 +287,10 @@ width: 42px;
 
 #overlay_container {
   position: absolute;
-  top: 30px;
+  top: 15px;
   left: 234px;
   width: calc(100% - 270px);
-  height: calc(100% - 60px);
+  height: calc(100% - 30px);
   border-radius: 15px;
   box-shadow: 0 0 1.3vh black;
   z-index: 1;
