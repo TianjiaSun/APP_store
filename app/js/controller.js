@@ -47,9 +47,8 @@ var store = angular.module('store',['ngRoute'])
     $timeout(function(){ $("#overlay_container").fadeIn(500); }, 550);
   }
 
-  $scope.setup = function() {
-    alert("done");
-    console.log("done");
+  $scope.install_this_app = function() {
+    alert($scope.app.id);
   }
 
   $scope.closeApp = function() {
