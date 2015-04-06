@@ -36,15 +36,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23538a', end
 }
 
 .logo {
-left: 16px;
-top: 14px;
-font-family: arial;
-font-size: 22px;
-text-align: left;
-position: relative;
-color: #FFFFFF;
-font-weight: bold;
-margin-bottom: 26px;
+  left: 16px;
+  top: 16px;
+  height: 62px;
+  font-family: arial;
+  font-size: 20px;
+  text-align: left;
+  position: relative;
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-bottom: 0px;
 }
 
 .search_bar {
@@ -95,17 +96,17 @@ cursor: pointer;
 }
 
 .main_navigator_h1 {
-font-size: 2vh;
-font-family: Arial;
-height: 3.5vh;
-width: 180px;
-position: relative;
-line-height: 3.5vh;
-padding-left: 0px;
-padding-bottom: 7px;
-margin-left: 16px;
-margin-right: 0px;
-color: #FFFFFF;
+  font-size: 2.1vh;
+  font-family: Arial;
+  height: 3.7vh;
+  width: 180px;
+  position: relative;
+  line-height: 3.7vh;
+  padding-left: 0px;
+  padding-bottom: 7px;
+  margin-left: 16px;
+  margin-right: 0px;
+  color: #FFFFFF;
 }
 
 .main_navigator_h1:hover {
@@ -114,17 +115,17 @@ color: orange;
 }
 
 .main_navigator_h2 {
-font-size: 1.8vh;
-font-family: Arial;
-height: 3.2vh;
-width: 179px;
-position: relative;
-line-height: 3.2vh;
-padding-left: 7px;
-margin-left: 20px;
-margin-right: 0px;
-border-color: #33CCFF;
-color: #EEEEEE;
+  font-size: 1.9vh;
+  font-family: Arial;
+  height: 3.3vh;
+  width: 179px;
+  position: relative;
+  line-height: 3.3vh;
+  padding-left: 7px;
+  margin-left: 20px;
+  margin-right: 0px;
+  border-color: #33CCFF;
+  color: #EEEEEE;
 }
 
 .main_navigator_h2:hover {
@@ -174,8 +175,8 @@ padding-bottom: 4px;
 position: relative;
   float: left;
   width: calc(25vw - 86px);
-  min-width: 250px;
-  min-height: 170px;
+  min-width: 238px;
+  min-height: 172px;
   height: 13vw;
   margin: 12px;
   background: rgb(219, 219, 219);
