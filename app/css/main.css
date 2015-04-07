@@ -36,11 +36,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#23538a', end
 }
 
 .logo {
-  left: 16px;
-  top: 16px;
+left: 16px;
+  top: 19px;
   height: 62px;
   font-family: arial;
-  font-size: 20px;
+  font-size: 19px;
   text-align: left;
   position: relative;
   color: #FFFFFF;
