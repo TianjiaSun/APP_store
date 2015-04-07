@@ -161,14 +161,14 @@ overflow-x: hidden;
 
 .page_header {
 position: relative;
-left: 7px;
-top: 4px;
-font-family: arial;
-font-size: 23px;
-margin-bottom: 5px;
-color: #23538a;
-font-weight: bold;
-padding-bottom: 4px;
+  left: 10px;
+  top: 8px;
+  font-family: arial;
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: #23538a;
+  font-weight: bold;
+  padding-bottom: 4px;
 }
 
 .app_unit {
