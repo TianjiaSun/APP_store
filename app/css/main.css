@@ -48,6 +48,10 @@ left: 16px;
   margin-bottom: 0px;
 }
 
+.logo:hover {
+cursor: pointer;
+}
+
 .search_bar {
 position: relative;
 width: 176px;
@@ -267,7 +271,7 @@ color: rgb(51,176,240);
   left: 5px;
   width: 56px;
   height: 56px;
-  border-radius: 5px;
+  border-radius: 18%;
   box-shadow: 0 0 8px 1px black;
   opacity: 1;
 }

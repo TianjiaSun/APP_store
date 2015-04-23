@@ -48,7 +48,7 @@ var store = angular.module('store',['ngRoute'])
   }
 
   $scope.install_this_app = function() {
-    alert($scope.app.id);
+    //alert($scope.app.id);
   }
 
   $scope.closeApp = function() {
